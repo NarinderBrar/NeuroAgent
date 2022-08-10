@@ -1,0 +1,11 @@
+{
+    "All":
+    {
+        "write_report": false
+    },
+    "Env":
+    {
+        "env": "FooEnv-v0",
+        "inter_trial_observation": [0, 0]
+    }
+}

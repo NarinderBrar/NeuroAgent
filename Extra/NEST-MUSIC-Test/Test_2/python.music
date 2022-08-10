@@ -1,0 +1,12 @@
+stoptime=10.
+rtf=1.
+
+[from]
+binary=./send.py
+np=2
+
+[to]
+binary=./receive.py
+np=2
+
+from.p_out -> to.p_in [2]

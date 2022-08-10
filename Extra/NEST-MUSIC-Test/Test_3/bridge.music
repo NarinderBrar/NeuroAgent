@@ -1,0 +1,25 @@
+stoptime=0.1
+timestep=0.001
+
+errorAt=-1
+
+buffer=1
+events=500
+
+[brain]
+    np=2
+    binary=./brain.py
+[cont]
+    np=1
+    binary=./controller.py
+
+[spkOut]
+    np=1
+    binary=./eventsource.py
+
+[spkIn]
+    np=1
+    binary=./eventlogger.py
+
+brain.out -> cont.in [2]
+spkOut.out -> spkIn.in [10]

@@ -1,0 +1,54 @@
+{
+    Dynamic state variables:
+    ----------------------
+    V_m, mV, Membrane potential, -70.6 
+    I_ex, pA, Excitatory synaptic current
+    I_in, pA, Inhibitory synaptic current
+    w, pA, Spike-adaptation current, 0.0
+    
+    Membrane Parameters
+    ----------------------
+    C_m, pF, Capacity of the membrane, 271.0
+    t_ref, ms, Duration of refractory period, 0.0
+    V_reset, mV, Reset value for V_m after a spike, -60.0
+    E_L, mV, Leak reversal potential, -70.6
+    g_L, nS, Leak conductance, 30.0
+    I_e, pA, Constant external input current, 0.0
+
+    Spike adaptation parameters
+    ----------------------
+    a, ns, Subthreshold adaptation, 4.0
+    b, pA, Spike-triggered adaptation, 80.5
+    Delta_T, mV, Slope factor, 2.0
+    tau_w, ms, Adaptation time constant, 114.0
+    V_t, mV, Spike initiation threshold
+    V_peak, mV, Spike detection threshold, 0.0
+    
+    Synaptic parameters
+    ----------------------
+    tau_syn_ex, ms, Exponential decay time constant of excitatory synaptic conductance kernel, 0.2
+    tau_syn_in, ms, Exponential decay time constant of inhibitory synaptic conductance kernel, 2.0
+    
+    Integration parameters
+    ----------------------
+    gsl_error_tol, real, This parameter controls the admissible error of the GSL integrator. Reduce it if NEST complains about numerical instabilities, 1e-06
+
+    'V_th': -50.4, 
+    'vp': -1,
+    'beta_Ca': 0.001,
+    'Ca': 0.0, 
+    'capacity': (1000,), 
+    'elementsize': 680, 
+    'frozen': False, 
+    'global_id': 0, 
+    'I_syn_ex': 0.0, 
+    'I_syn_in': 0.0,  
+    'local': True,   
+    'post_trace': 0.0,   
+    't_spike': -1.0, 
+    'tau_Ca': 10000.0, 
+    'tau_minus': 20.0, 
+    'tau_minus_triplet': 110.0, 
+    'thread': 0, 
+    'thread_local_id': -1,  
+}    
