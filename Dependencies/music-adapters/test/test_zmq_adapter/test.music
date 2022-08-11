@@ -1,0 +1,13 @@
+stoptime=1.
+rtf=1.
+[input]
+    binary=zmq_cont_adapter
+    np=1
+    args=
+    zmq_addr=tcp://localhost:5558
+[output]
+    binary=cont_zmq_adapter
+    np=1
+    args=
+    zmq_addr=tcp://*:5559
+input.out->output.in[3]

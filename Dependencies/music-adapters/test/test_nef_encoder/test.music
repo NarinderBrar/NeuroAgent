@@ -1,0 +1,21 @@
+stoptime=300.
+rtf=1.0
+music_timestep=0.001
+[sensor]
+  binary=zmq_cont_adapter
+  args=
+  np=1
+  message_type=GymObservation
+  zmq_topic=
+  zmq_addr=tcp://localhost:4555
+[encoder]
+  binary=nef_encoder
+  args=
+  np=1
+  one_hot=false
+[nest]
+  binary=./test.py
+  args=
+  np=1
+sensor.out->encoder.in[3]
+encoder.out->nest.sensory[100]

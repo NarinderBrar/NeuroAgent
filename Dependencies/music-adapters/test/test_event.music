@@ -1,0 +1,26 @@
+stoptime=10.
+rtf=1.
+[input]
+    binary=../../bld_music-adapters/zmq_cont_adapter
+    np=1
+    args=
+    zmq_addr=tcp://localhost:4555
+[encoder]
+    binary=../../bld_music-adapters/nef_encoder
+    np=1
+    args=
+    rate_min=1
+    rate_max=10
+[decoder]
+    binary=../../bld_music-adapters/linear_decoder
+    np=1
+    args=
+    tau=30
+[output]
+    binary=../../bld_music-adapters/cont_zmq_adapter
+    np=1
+    args=
+    zmq_addr=tcp://*:5559
+input.out->encoder.in[3]
+encoder.out->decoder.in[3]
+decoder.out->output.in[8]

@@ -1,0 +1,25 @@
+stoptime=10.
+rtf=1.
+[input]
+    binary=../../bld_music-adapters/zmq_cont_adapter
+    np=1
+    args=
+    zmq_addr=tcp://localhost:4555
+[connect]
+    binary=../../bld_music-adapters/cont_cont_adapter
+    np=1
+    args=
+    weights_filename=connect.json
+[discretize]
+    binary=../../bld_music-adapters/discretize_adapter
+    np=1
+    args=
+    grid_positions_filename=grid_pos.json
+[output]
+    binary=../../bld_music-adapters/cont_zmq_adapter
+    np=1
+    args=
+    zmq_addr=tcp://*:5559
+input.out->connect.in[3]
+connect.out->discretize.in[3]
+discretize.out->output.in[8]
